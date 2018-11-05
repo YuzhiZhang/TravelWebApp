@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # travelwebapp
 a travel webapp
 ## Project setup
@@ -30,7 +29,3 @@ npm run lint
 ```
 npm run test:unit
 ```
-=======
-# TravelWebApp
-a travel website
->>>>>>> aa9b2247417ba9265bab733ef8d3e0b63640415d
