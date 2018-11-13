@@ -5,6 +5,16 @@
  */
 module.exports = {
   devServer: {
-    port: 8088
+    port: 8088,
+    proxy: {
+      '/api': {
+        target: 'http://192.168.137.1:8088',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/mock'
+        }
+      }
+    }
   }
 }
