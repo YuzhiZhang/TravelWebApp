@@ -6,6 +6,7 @@
 module.exports = {
   devServer: {
     port: 8088,
+    disableHostCheck: true,
     proxy: {
       '/api': {
         target: 'http://192.168.137.1:8088',
