@@ -9,7 +9,7 @@ module.exports = {
     disableHostCheck: true,
     proxy: {
       '/api': {
-        target: 'http://192.168.137.1:8088',
+        target: 'http://localhost:8088',
         ws: true,
         changeOrigin: true,
         pathRewrite: {
