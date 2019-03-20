@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+  @import "~@/assets/styles/varibles.styl"
   .list
     display flex
     flex-direction column
