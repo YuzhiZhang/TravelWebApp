@@ -14,22 +14,23 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  @import '~@/assets/styles/varibles.styl'
-  .header
-    position relative
-    overflow hidden
-    height: $headerHeight
-    line-height $headerHeight
+@import '~@/assets/styles/varibles.styl'
+.header
+  position relative
+  overflow hidden
+  height: $headerHeight
+  line-height $headerHeight
+  text-align center
+  color #fff
+  background $bgColor
+  font-size .32rem
+
+  .header-back
+    position absolute
+    left 0
+    top 0
+    width .64rem
     text-align center
+    font-size .4rem
     color #fff
-    background $bgColor
-    font-size .32rem
-    .header-back
-      position absolute
-      left 0
-      top 0
-      width .64rem
-      text-align center
-      font-size .4rem
-      color #fff
 </style>
