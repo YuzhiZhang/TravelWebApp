@@ -9,7 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{city}}
+        {{ city }}
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
     </router-link>
@@ -26,34 +26,34 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  @import "~@/assets/styles/varibles.styl"
-  .header
-    display: flex
-    line-height: $headerHeight
-    background: $bgColor
-    color: #ffff
-    .header-left
-      width: .64rem
-      .back-icon
-        text-align: center
-        font-size: 0.4rem
-    .header-input
-      flex: 1
-      height: .64rem
-      line-height: .64rem
-      margin-top: .12rem
-      margin-left: .2rem
-      padding-left: .2rem
-      background-color: #fff
-      color: #ccc
-      -webkit-border-radius: .1rem
-      -moz-border-radius: .1rem
-      border-radius: .1rem
-    .header-right
-      width: 1.24rem
+@import "~@/assets/styles/varibles.styl"
+.header
+  display: flex
+  line-height: $headerHeight
+  background: $bgColor
+  color: #ffff
+  .header-left
+    width: .64rem
+    .back-icon
       text-align: center
-      color #fff
-      .arrow-icon
-        margin-left: -.04rem
-        font-size: .24rem
+      font-size: 0.4rem
+  .header-input
+    flex: 1
+    height: .64rem
+    line-height: .64rem
+    margin-top: .12rem
+    margin-left: .2rem
+    padding-left: .2rem
+    background-color: #fff
+    color: #ccc
+    -webkit-border-radius: .1rem
+    -moz-border-radius: .1rem
+    border-radius: .1rem
+  .header-right
+    width: 1.24rem
+    text-align: center
+    color #fff
+    .arrow-icon
+      margin-left: -.04rem
+      font-size: .24rem
 </style>
