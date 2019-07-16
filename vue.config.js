@@ -5,11 +5,11 @@
  */
 module.exports = {
   devServer: {
-    port: 8088,
+    port: 8888,
     disableHostCheck: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:8088',
+        target: 'http://127.0.0.1:8888',
         ws: true,
         changeOrigin: true,
         pathRewrite: {
