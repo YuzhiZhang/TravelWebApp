@@ -16,29 +16,29 @@
 export default {
   name: 'HomeSwiper',
   props: {
-    list: Array
+    list: Array,
   },
   data() {
     return {
       swiperOption: {
         pagination: {
-          el: '.swiper-pagination'
+          el: '.swiper-pagination',
         },
         loop: true,
         autoplay: {
           delay: 3000,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         },
         observer: true, //修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true //修改swiper的父元素时，自动初始化swiper
-      }
+        observeParents: true, //修改swiper的父元素时，自动初始化swiper
+      },
     }
   },
   computed: {
     showSwiper() {
       return this.list.length
-    }
-  }
+    },
+  },
 }
 </script>
 

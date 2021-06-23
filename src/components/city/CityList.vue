@@ -46,30 +46,30 @@ export default {
   name: 'CityList',
   props: {
     hot: {
-      default: function() {
+      default: function () {
         return []
       },
-      type: Array
+      type: Array,
     },
     cities: {
-      default: function() {
+      default: function () {
         return {}
       },
-      type: Object
+      type: Object,
     },
     letter: {
       default: '',
-      type: String
-    }
+      type: String,
+    },
   },
   computed: {
     ...mapState({
-      currentCity: 'city'
-    })
+      currentCity: 'city',
+    }),
   },
   data() {
     return {
-      scroll: null
+      scroll: null,
     }
   },
   watch: {
@@ -78,17 +78,17 @@ export default {
         const element = this.$refs[this.letter][0]
         this.scroll.scrollToElement(element)
       }
-    }
+    },
   },
   mounted() {
-    this.scroll = new BScroll(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper, { click: true })
   },
   methods: {
     handleCityClick(city) {
       this.$store.dispatch('changeCity', city)
       this.$router.push('/')
-    }
-  }
+    },
+  },
 }
 </script>
 

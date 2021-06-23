@@ -19,14 +19,14 @@ export default {
     return {
       cities: {},
       hotCities: [],
-      letter: ''
+      letter: '',
     }
   },
   components: {
     CityHeader,
     CitySearch,
     CityList,
-    CityAlphabet
+    CityAlphabet,
   },
   methods: {
     getCityInfo() {
@@ -42,11 +42,11 @@ export default {
     },
     handleLetterChange(letter) {
       this.letter = letter
-    }
+    },
   },
   mounted() {
     this.getCityInfo()
-  }
+  },
 }
 </script>
 

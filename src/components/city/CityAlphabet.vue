@@ -20,17 +20,17 @@ export default {
   name: 'CityAlphabet',
   props: {
     cities: {
-      default: function() {
+      default: function () {
         return {}
       },
-      type: Object
-    }
+      type: Object,
+    },
   },
   data() {
     return {
       touchStatus: false,
       startY: 0,
-      timer: null
+      timer: null,
     }
   },
   updated() {
@@ -40,12 +40,12 @@ export default {
     letters() {
       const letters = []
       for (let i in this.cities) {
-        if (this.cities.hasOwnProperty(i)) {
+        if (Object.prototype.hasOwnProperty.call(this.cities, i)) {
           letters.push(i)
         }
       }
       return letters
-    }
+    },
   },
   methods: {
     handleLetterClick(e) {
@@ -70,8 +70,8 @@ export default {
     },
     handleTouchEnd() {
       this.touchStatus = false
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -24,7 +24,7 @@ export default {
       swiperList: [],
       iconsList: [],
       recommendList: [],
-      weekendList: []
+      weekendList: [],
     }
   },
   components: {
@@ -32,7 +32,7 @@ export default {
     HomeHeader,
     HomeSwiper,
     HomeIcons,
-    HomeRecommend
+    HomeRecommend,
   },
   methods: {
     getHomeInfo() {
@@ -47,10 +47,10 @@ export default {
         this.recommendList = data.recommendList
         this.weekendList = data.weekendList
       }
-    }
+    },
   },
   mounted() {
     this.getHomeInfo()
-  }
+  },
 }
 </script>

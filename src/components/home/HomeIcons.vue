@@ -18,15 +18,15 @@
 export default {
   name: 'HomeIcons',
   props: {
-    list: Array
+    list: Array,
   },
   data() {
     return {
       swiperOption: {
         pagination: {
-          el: '.icons .swiper-pagination'
-        }
-      }
+          el: '.icons .swiper-pagination',
+        },
+      },
     }
   },
   computed: {
@@ -40,8 +40,8 @@ export default {
         pages[page].push(item)
       })
       return pages
-    }
-  }
+    },
+  },
 }
 </script>
 

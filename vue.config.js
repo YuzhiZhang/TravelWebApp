@@ -13,9 +13,9 @@ module.exports = {
         ws: true,
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/mock'
-        }
-      }
-    }
-  }
+          '^/api': '/mock',
+        },
+      },
+    },
+  },
 }

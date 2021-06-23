@@ -28,21 +28,21 @@ export default {
       type: Object,
       default() {
         return {}
-      }
-    }
+      },
+    },
   },
   data() {
     return {
       keyword: '',
       list: [],
       timer: null,
-      scroll: null
+      scroll: null,
     }
   },
   computed: {
     hasNoData() {
       return !this.list.length
-    }
+    },
   },
   watch: {
     keyword() {
@@ -56,8 +56,8 @@ export default {
       this.timer = setTimeout(() => {
         const result = []
         for (let i in this.cities) {
-          if (this.cities.hasOwnProperty(i)) {
-            this.cities[i].forEach(item => {
+          if (Object.prototype.hasOwnProperty.call(this.cities, i)) {
+            this.cities[i].forEach((item) => {
               if (item.spell.indexOf(this.keyword) > -1 || item.name.indexOf(this.keyword) > -1) {
                 result.push(item)
               }
@@ -66,7 +66,7 @@ export default {
         }
         this.list = result
       }, 100)
-    }
+    },
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.searchContent)
@@ -75,8 +75,8 @@ export default {
     handleCityClick(city) {
       this.$store.dispatch('changeCity', city)
       this.$router.push('/')
-    }
-  }
+    },
+  },
 }
 </script>
 
