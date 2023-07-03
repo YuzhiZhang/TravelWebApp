@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import '~@/assets/styles/mixins.styl'
+
 .title
   margin-top .2rem
   line-height .8rem

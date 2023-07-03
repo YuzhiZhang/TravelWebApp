@@ -2,7 +2,7 @@
   <div class="header">
     城市选择
     <router-link to="/">
-      <div class="iconfont header-back">&#xe624;</div>
+      <div class="i-ant-design-left-outlined header-back"></div>
     </router-link>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import '~@/assets/styles/varibles.styl'
+
 .header
   position relative
   overflow hidden
@@ -28,7 +28,8 @@ export default {
   .header-back
     position absolute
     left 0
-    top 0
+    top 50%
+    transform translateY(-50%)
     width .64rem
     text-align center
     font-size .4rem

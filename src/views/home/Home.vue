@@ -18,7 +18,7 @@ import HomeWeekend from '../../components/home/HomeWeekend.vue'
 import axios from 'axios'
 
 export default {
-  name: 'home',
+  name: 'HomePage',
   data() {
     return {
       swiperList: [],
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     getHomeInfo() {
-      axios.get('/api/index.json').then(this.getHomeInfoSucc)
+      axios.get('/mock/index.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res) {
       res = res.data

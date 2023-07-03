@@ -21,6 +21,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+
 export default {
   name: 'CitySearch',
   props: {
@@ -81,7 +82,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import '~@/assets/styles/varibles.styl'
+
 .search
   height .72rem
   padding 0 .1rem

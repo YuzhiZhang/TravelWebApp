@@ -1,23 +1,30 @@
 <template>
   <div class="header">
-    <div class="header-left">
-      <div class="iconfont back-icon">&#xe624;</div>
+    <div class="header-left flex justify-center items-center">
+      <div class="i-ant-design-left-outlined back-icon"></div>
     </div>
-    <div class="header-input">
-      <span class="iconfont">&#xe632;</span>
-      输入城市/景点/游玩主题
+    <div class="header-input flex items-center">
+      <div class="header-input-icon i-ant-design-search-outlined">
+      </div>
+      <div class="header-input-content flex-1">
+        输入城市/景点/游玩主题
+      </div>
+
     </div>
     <router-link to="/city">
-      <div class="header-right">
-        {{ city }}
-        <span class="iconfont arrow-icon">&#xe64a;</span>
+      <div class="header-right flex justify-center items-center">
+        <div class="header-right-content">
+          {{ city }}
+        </div>
+        <span class="i-ant-design-caret-down-filled arrow-icon"></span>
       </div>
     </router-link>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
+
 export default {
   name: 'HomeHeader',
   computed: {
@@ -27,14 +34,14 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import "~@/assets/styles/varibles.styl"
+
 .header
   display: flex
   line-height: $headerHeight
   background: $bgColor
   color: #ffff
   .header-left
-    width: .64rem
+    width: 0.64rem
     .back-icon
       text-align: center
       font-size: 0.4rem
@@ -50,13 +57,18 @@ export default {
     -webkit-border-radius: .1rem
     -moz-border-radius: .1rem
     border-radius: .1rem
+    &-icon
+      font-size: 0.32rem
+    &-content
+      font-size: 0.28rem
+    .search-icon
+      font-size: 0.32rem
   .header-right
     min-width: 1.04rem
     padding: 0 .1rem
-    float: right
     text-align: center
     color #fff
     .arrow-icon
-      margin-left: -.04rem
+      margin-left: .04rem
       font-size: .24rem
 </style>

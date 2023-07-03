@@ -9,12 +9,13 @@
 
 <script>
 import axios from 'axios'
-import CityHeader from '@/components/city/CityHeader'
-import CitySearch from '@/components/city/CitySearch'
-import CityList from '@/components/city/CityList'
-import CityAlphabet from '@/components/city/CityAlphabet'
+import CityHeader from '@/components/city/CityHeader.vue'
+import CitySearch from '@/components/city/CitySearch.vue'
+import CityList from '@/components/city/CityList.vue'
+import CityAlphabet from '@/components/city/CityAlphabet.vue'
+
 export default {
-  name: 'City',
+  name: 'CityPage',
   data() {
     return {
       cities: {},
@@ -30,7 +31,7 @@ export default {
   },
   methods: {
     getCityInfo() {
-      axios.get('/api/city.json').then(this.handleGetCityInfoSucc)
+      axios.get('/mock/city.json').then(this.handleGetCityInfoSucc)
     },
     handleGetCityInfoSucc(res) {
       res = res.data
